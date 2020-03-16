@@ -41,7 +41,6 @@ EOF
 }
 
 if [ $# -eq 0 ]; then
-  strart_local_redis
 
   echo "writing config.." >&2
   write_config > ./webdis.json

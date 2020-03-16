@@ -10,6 +10,6 @@ RUN cd webdis-$WEBDIS_VERSION && make && make install
 FROM alpine:3.11.3
 RUN apk update && apk add libevent
 COPY --from=stage /usr/local/bin/webdis /usr/local/bin/
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh ./entrypoint.sh
 EXPOSE 7379
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "./entrypoint.sh"]

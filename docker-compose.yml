@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  webdis:
+    build: .
+    environment: 
+      - REDIS_HOST=redis
+    links:
+      - redis
+    ports:
+      - 7379:7379
+  redis:
+    image: redis:latest
