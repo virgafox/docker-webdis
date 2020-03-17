@@ -13,4 +13,4 @@ COPY --from=stage /usr/local/bin/webdis /usr/local/bin/
 WORKDIR /root
 COPY entrypoint.sh ./entrypoint.sh
 EXPOSE 7379
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
